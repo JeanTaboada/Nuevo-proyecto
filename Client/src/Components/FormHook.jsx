@@ -73,6 +73,15 @@ export const FormHook = () => {
         </div>
         <button type="submit" className="btn m-2 btn-primary">REGISTRAR</button>
     </form>
+
+    <h2 className="mt-4">Lista de Usuarios Registrados</h2>
+            <ul className="list-group">
+                {userArray.map((user, index) => (
+                    <li key={index} className="list-group-item text-black">
+                        <strong>Usuario:</strong> {user.userName} | <strong>Email:</strong> {user.email}
+                    </li>
+                ))}
+            </ul>
     </div>
   )
 }
